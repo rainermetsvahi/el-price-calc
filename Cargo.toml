@@ -1,0 +1,6 @@
+[package]
+name = "electricity_market_price_bill"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
