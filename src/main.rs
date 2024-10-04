@@ -1,4 +1,5 @@
 use std::env;
+use std::process;
 use std::fs::File;
 use std::io::prelude::*;
 use std::io::{BufReader, Lines, Result};
@@ -11,6 +12,10 @@ fn read_lines(file_path: &str) -> Result<Lines<BufReader<File>>> {
 fn main() {
     let args: Vec<String> = env::args().collect();
 
+    if args.len() < 2 {
+        println!("No input file given");
+        process::exit(-2);
+    }
     let file_path = &args[1];
 
     println!("Reading file {file_path}");
