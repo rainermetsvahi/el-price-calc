@@ -46,7 +46,8 @@ fn main() {
         Err(e) => println!("Error reading file: {}", e),
     }
     let read_lines = current_line - 1;
-    println!("Read {read_lines} lines, sum is {sum:.2}")
+    let cost_eur = sum / 100.0;
+    println!("Read {read_lines} lines, sum is {cost_eur:.2} €")
 }
 
 fn calc_cost(kwh: f64, price_per_kwh: f64) -> f64 {
